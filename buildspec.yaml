@@ -8,14 +8,14 @@ phases:
       - pip install requests -t lib
   build:
     commands:
-      - echo "Zipping deployment package..."
+      # - echo "Zipping deployment package..."
       - ls
-      - cd lib
-      - echo "Inside lib"
-      - ls
-      - zip -r9 ../deployment_package_1.zip .
-      - cd ..
-      - zip -r -j deployment_package_1.zip backended
+      # - cd lib
+      # - echo "Inside lib"
+      # - ls
+      # - zip -r9 ../deployment_package_1.zip .
+      # - cd ..
+      # - zip -r -j deployment_package_1.zip backended
   post_build:
     commands:
       - echo "Updating lambda Function..."
