@@ -14,7 +14,7 @@ phases:
       # - echo "Inside lib"
       # - ls
       - zip -r9 ../deployment_package_1.zip .
-      # - cd ..
+      - cd ..
       # - zip -r -j deployment_package_1.zip backended
   post_build:
     commands:
