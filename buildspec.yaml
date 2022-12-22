@@ -4,16 +4,16 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - echo "Installing dependencies..."
-      - pip install requests -t lib
+      # - echo "Installing dependencies..."
+      # - pip install requests -t lib
   build:
     commands:
-      # - echo "Zipping deployment package..."
+      - echo "Zipping deployment package..."
       - ls
-      # - cd lib
+      - cd backend
       # - echo "Inside lib"
       # - ls
-      # - zip -r9 ../deployment_package_1.zip .
+      - zip -r9 ../deployment_package_1.zip .
       # - cd ..
       # - zip -r -j deployment_package_1.zip backended
   post_build:
