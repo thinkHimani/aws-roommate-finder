@@ -16,7 +16,7 @@ phases:
       # - zip -r9 ../deployment_package_1.zip .
       # - cd ..
       - zip deployment_package_1.zip backend
-      - cd ..
+      # - cd ..
   post_build:
     commands:
       - echo "Updating lambda Function..."
