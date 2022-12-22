@@ -9,7 +9,10 @@ phases:
   build:
     commands:
       - echo "Zipping deployment package..."
+      - ls
       - cd lib
+      - echo "Inside lib"
+      - ls
       - zip -r9 ../deployment_package_1.zip .
       - cd ..
       - zip -r -j deployment_package_1.zip backended
