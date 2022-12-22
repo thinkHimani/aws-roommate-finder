@@ -15,7 +15,7 @@ phases:
       # - ls
       # - zip -r9 ../deployment_package_1.zip .
       # - cd ..
-      - zip -r -j deployment_package_1.zip backend
+      - zip deployment_package_1.zip backend
       - cd ..
   post_build:
     commands:
