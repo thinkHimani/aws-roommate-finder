@@ -13,9 +13,10 @@ phases:
       - cd backend
       # - echo "Inside lib"
       # - ls
-      - zip -r9 ../deployment_package_1.zip .
+      # - zip -r9 ../deployment_package_1.zip .
+      # - cd ..
+      - zip -r -j deployment_package_1.zip backended
       - cd ..
-      # - zip -r -j deployment_package_1.zip backended
   post_build:
     commands:
       - echo "Updating lambda Function..."
