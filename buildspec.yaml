@@ -14,7 +14,7 @@ phases:
       - zip -r9 ../login-backend.zip .
       - cd ..
       - ls
-      - cd backend/recommendations
+      - cd recommendations
       - zip -r9 ../recommendations.zip .
       - cd ..
       - ls
