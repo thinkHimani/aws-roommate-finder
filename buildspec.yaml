@@ -28,4 +28,4 @@ phases:
       - ls
       - aws s3 rm s3://pipeline-ht --recursive
       - aws s3 cp frontend/build/ s3://pipeline-ht --recursive
-      - echo "DONE!!"
+      - echo "DONE!!" 
