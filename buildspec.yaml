@@ -10,15 +10,22 @@ phases:
     commands:
       - echo "Zipping deployment package..."
       - ls
-      # - cd backend
-      # - echo "Inside lib"
-      # - ls
-      # - zip -r9 ../deployment_package_1.zip .
-      # - cd ..
-      - zip deployment_package_1.zip backend
-      # - cd ..
+      - cd backend/login-backend
+      - zip -r9 ../login-backend.zip .
+      - cd ..
+      - ls
+      - cd backend/recommendations
+      - zip -r9 ../recommendations.zip .
+      - cd ..
+      - ls
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name login-backend --zip-file fileb://deployment_package_1.zip
+      - aws lambda update-function-code --function-name pipelinetest --zip-file fileb://login-backend.zip
+      - aws lambda update-function-code --function-name pipelinetest2 --zip-file fileb://recommendations.zip
+      - ls
+      - cd ..
+      - ls
+      - aws s3 rm s3://${pipeline-ht} --recursive
+      - aws s3 cp frontend/build/ s3://${pipeline-ht} --recursive
       - echo "DONE!!"
